@@ -1,14 +1,15 @@
-# grill-hard
+# FORKED! Thanks, @amaezey!
+## grill-hard
 
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for stress-testing plans and designs.
 
-## What it does
+### What it does
 
 Asks you one question at a time about your plan, starting with the most foundational decisions. Each question uses the `AskUserQuestion` tool with a recommended answer and alternatives. You resolve one thing, then get the next. At the end you get a summary of every decision made.
 
 Without the skill, Claude tends to ask long lists of questions, gets ahead of itself, and buries key decisions.
 
-## Origin and attribution
+### Origin and attribution
 
 Forked from [Matt Pocock's grill-me skill](https://github.com/mattpocock/skills), which is great and worth using as-is. This version tweaks it for my preferences: less meta-framing, more thoughtful questions grounded in the codebase, and a stricter interview style. I ran it through four rounds of structured evaluation (baseline comparisons, LLM-graded assertions, human review) to get there. The main changes:
 
@@ -19,7 +20,7 @@ Forked from [Matt Pocock's grill-me skill](https://github.com/mattpocock/skills)
 - **Codebase awareness:** looks things up instead of asking you questions it could answer itself
 
 
-## Install
+### Install
 
 Copy `SKILL.md` to your Claude Code skills directory:
 
@@ -36,7 +37,7 @@ mkdir -p ~/.claude/skills/grill-hard
 ln -s "$(pwd)/grill-hard/SKILL.md" ~/.claude/skills/grill-hard/skill.md
 ```
 
-## Usage
+### Usage
 
 Just tell Claude to grill you:
 
@@ -45,6 +46,6 @@ Just tell Claude to grill you:
 - "what am I missing in this design"
 - "tear this apart before I ship it"
 
-## Licence
+### Licence
 
 MIT
